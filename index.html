@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVERTIS UNIVERSITY</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>INVERTIS UNIVERSITY</h1>
+        <!-- <img src="https://play-lh.googleusercontent.com/JhC6UlYu2nshflxXdg6cBMYNn6GNo7O6Vo3dJo90Y_15pdTG5NSF4StWnyMfqSbzdAvi" alt="logo"  
+        class="logo">-->
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#">Syllebus</a>
+            <ul> <li><a href="https://www.invertisuniversity.ac.in/pdf-course-structure/pg/mca-first-year-syllabus.pdf">MCA 1</a></li>
+                <li><a href="https://www.invertisuniversity.ac.in/pdf-course-structure/pg/mca-second-year-syllabus.pdf">MCA2</a></li></ul></li>
+            <li><a href="https://www.calendarr.com/india/calendar-2024/">Events</a></li>
+            <li><a href="https://www.timeanddate.com/worldclock/fullscreen.html?n=545">Time</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <table id="eventTable">
+            <thead>
+                <tr>
+                    <th><label for="dateInput">Select the date:</label><input type="date" id="dateInput"></th>
+                    <th>Event</th>
+                </tr>
+            </thead>
+            <tbody id="eventTableBody"></tbody>
+        </table>
+        <div class="button">
+            <button onclick="displayEvents()"><b>Display Event</b></button>
+        </div>
+        <div id="eventContainer"></div>
+    </div>
+</body>
+
+</html>

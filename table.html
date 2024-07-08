@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Event Display</title>
+    <link rel="stylesheet" href="web.css">
+    <script src="web.js"></script>
+</head>
+
+<body>
+    <div class="container1">
+        <table style="width:100%">
+            <tr>
+                <td rowspan="4" style="height:680px; width:100px">
+                </td>
+                <td rowspan="4" style="height:680px; width:300px">
+                    <!--<div class="container1">-->
+                    <div class="container">
+                        <div><img src="event.gif"></div>
+
+                        <div class="centered"><b><i>Academic Calendar</i></b></div>
+                        <div class="date">
+                            <label for="dateInput"><b>Enter The Date:</b></label>
+                            <input type="date" id="dateInput">
+                        </div>
+
+
+                        <!--for button-->
+                        <div class="button">
+                            <button onclick="displayEvents()"><b>Display Event</b></button>
+                        </div>
+                        <div id="eventContainer"></div>
+                    </div>
+                </td>
+                <td rowspan="4" style="height:680px; width:100px"></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

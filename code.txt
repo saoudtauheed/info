@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Display</title>
+  <link rel="stylesheet" href="web.css">
+  <script src="web.js"></script>
+</head>
+<body>
+  <!--div for image-->
+  <div class="container">
+    <img src="event.gif" alt="view">
+  
+    
+    <!--div for heading-->
+    <div class="centered"><b><i>Event Academic Calender</i></b></div>
+    
+    <!--div for date-->
+    <div class="date">
+      <label for="dateInput"><b>Enter The Date:</b></label>
+      <input type="date" id="dateInput">
+    </div>
+    <!--for button-->
+    <div class="button">
+      <button onclick="displayEvents()"><b>Display Event</b></button>
+    </div>
+    <div id="eventContainer"></div>
+    
+  </div>
+</body>
+</html>
+
+body {
+  font-family: Arial, sans-serif;
+  border: 2px solid black;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: navy;
+  background-color: skyblue;
+}
+
+.centered {
+  position: absolute;
+  top: 1%;
+  left: 35%;
+  border: 2px solid navy;
+  padding: 10px;
+  border-radius: 15px 10px;
+  font-size: xx-large;
+}
+img {
+  height: 40%;
+  width: 60%;
+  margin-top: 2px;
+  margin-bottom: 1px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.date {
+  position: absolute;
+  top: 34%;
+  left: 39%;
+  font-size: x-large;
+}
+
+.button {
+  position: absolute;
+  top: 40%;
+  left: 52%;
+  font-size: xx-large;}
+  .button{
+  border-radius: 40px 30px;
+}
+
+#eventContainer {
+  margin-top: 1px;}
+
+function displayEvents()
+ {
+  var dateInput = document.getElementById('dateInput').value;
+  var events = getEventsForDate(dateInput);
+  var eventContainer = document.getElementById('eventContainer');
+  eventContainer.innerHTML = '';
+
+  if (events.length > 0) 
+  {
+    var ul = document.createElement('ul');
+    events.forEach(function(event) {
+      var li = document.createElement('li');
+      li.textContent = event;
+      ul.appendChild(li);
+    });
+
+    eventContainer.appendChild(ul);
+  } 
+  else {
+    eventContainer.textContent = 'No events found for the selected date.';
+  }
+}
+
+function getEventsForDate(date) {
+  var Events = {
+    '2024-01-09': ['Commencemnt of classes'],
+    '2024-02-23': ['AnnualFest"invertia"'],
+    '2024-02-24': ['AnnualFest"invertia"'],
+    '2024-05-11': ['Last Day of Teaching'],
+    '2024-05-06': ['Admit card distribution'],
+    '2024-05-07': ['Admit card distribution'],
+    '2024-05-08': ['Practicals start'],
+    '2024-05-06': ['Admit card distribution'],
+    '2024-06-17': ['Summer break'],
+    '2024-06-19': ['Result decration'],
+    '2024-01-01': ['Happy New Year  may this new year your all dreams come true'],
+    '2024-01-13': ['Lohri'],
+    '2024-01-14': ['Maker Sankranti'],
+    '2024-01-15': ['Pongal'],
+    '2024-01-17': ['Guru Govind singh Jayanti'],
+    '2024-01-025': ['Hazrat ali birthday'],
+    '2024-01-26': ['Republic Day'],
+    '2024-02-14': ['Vasant panchami'],
+    '2024-02-19': ['Shiva ji jayanti'],
+    '2024-02-24': ['Guru Ravidas jayanti'],
+    '2024-03-08': ['Shivratri'],
+    '2024-03-12': ['Ramdan kareem'],
+    '2024-03-24': ['Holika dhana'],
+    '2024-03-25': ['holi'],
+    '2024-03-29': ['Good friday'],
+    '2024-03-31': ['Easter'],
+    '2024-04-05': ['Jamat-ul-vida'],
+    '2024-04-09': ['Navraat'],
+    '2024-04-11': ['Eid-ul fiter'],
+    '2024-04-13': ['Vaisakhi'],
+    '2024-04-14': ['Amedkar jayanti'],
+    '2024-04-17': ['Ram Navmi'],
+    '2024-04-21': ['Mahaveer jaynti'],
+    '2024-05-08': ['Birth of Rabindarnath'],
+    '2024-05-23': ['Budha purnima'],
+    '2024-06-17': ['Bakra Eid'],
+    '2024-07-17': ['Muharram'],
+    '2024-08-15': ['Indepandance day'],
+    '2024-08-19': ['Happy Rakshabandhan'],
+    '2024-08-26': ['Janamashtami'],
+    '2024-09-07': ['Ganesh mohotsav'],
+    '2024-09-15': ['Onam'],
+    '2024-09-16': ['Milad un Nabi'],
+    '2024-10-02': ['Mahatma Gandhi jayanti'],
+    '2024-10-03': ['Sharad navratri'],
+    '2024-10-09': ['Durga puja'],
+    '2024-10-11': ['Maha Navmi'],
+    '2024-10-12': ['Happy Dussera'],
+    '2024-10-17': ['Valmiki jayanti'],
+    '2024-10-20': ['Karva chauth'],
+    '2024-10-31': ['Happy dewali'],
+    '2024-11-02': ['Govardhan puja'],
+    '2024-11-03': ['Bhaiduj'],
+    '2024-11-07': ['chhat puja'],
+    '2024-11-15': ['Guru Nanak jayanti'],
+    '2024-11-24': ['Guru teg jayanti'],
+    '2024-12-24': ['Christmas Eve'],
+    '2024-12- 25': ['Christmas '],
+
+  };
+  return Events[date] || [];
+}

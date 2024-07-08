@@ -1,0 +1,142 @@
+body {
+ 
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('https://firstouchkiosk.com/wp-content/uploads/2022/07/invertis-univ-768x410.png');
+    animation: anim 30s infinite ease-in;
+
+    min-height: 100vh; 
+}
+
+header h1 {
+    text-align: center;
+    background-color: rgb(213, 7, 7);
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: white;
+    text-align: center; 
+    font-size: large; 
+    
+}
+
+nav ul li {
+    display: inline-block; 
+    margin: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    z-index: 1;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    clear: both;
+    width: 100%;
+}
+
+nav ul ul li a {
+    padding: 10px;
+    text-align: left;
+}
+
+nav ul ul ul {
+    left: 100%;
+    top: 0;
+}
+
+
+.container {
+    margin-top: 20px;
+    display: block;
+    position: relative;
+}
+
+table {
+    border-collapse: collapse;
+    width: 30%; 
+    position: relative;
+    font-size: medium; 
+
+    left: 60%;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    background-color: antiquewhite;
+}
+
+.button {
+    display:block;
+    margin-top: 10px;
+    background-color: antiquewhite;
+    position: relative;
+    width: 30%; 
+    margin-top: 20px;
+    left: 60%;
+}
+
+
+@keyframes anim {
+    0% {
+        background-image: url('https://icolleges.in/wp-content/uploads/2021/01/Capture5-5.jpg');
+        
+    }
+    25% {
+        background-image: url('https://i.ytimg.com/vi/HbQ3aKR_JtA/maxresdefault.jpg');
+    }
+    50% {
+        background-image: url('https://www.targetadmission.com/img/colleges/newc/50796-510931.jpg');
+    }
+    75% {
+        background-image: url('https://gumlet.assettype.com/knocksense/import/28267319/origin.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true');
+    }
+    100% {
+        background-image: url('https://www.addressguru.in/images/1595426084.png');
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px;
+    }
+    table {
+        position: absolute;
+        font-size: small; 
+        left:20%;
+    }
+    .button{
+        position: relative ;
+        left: 20%;
+        top: 60px;
+    }
+    body{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+}

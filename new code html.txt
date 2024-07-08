@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>invertis</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .selected-date {
+      background-color: #ffcccc;
+    }
+  </style>
+</head>
+<body>
+  
+      <table id="eventTable">
+        <thead>
+          <tr>
+            <th><label for="dateInput">Select the date:</label><input type="date" id="dateInput"></th>
+            <th>Event</th>
+          </tr>
+        </thead>
+        <tbody id="eventTableBody"></tbody>
+      </table>
+      <div class="container">
+        <div class="button">
+          <button onclick="displayEvents()"><b>Display Event</b></button>
+        </div>
+        <div id="eventContainer">
+    </div>
+  </div>
+  <script>
+    function displayEvents() {
+      var selectedDate = document.getElementById("dateInput").value;
+      var events = [
+        { date: "2024-01-01", event: "New Year" },
+        { date: "2024-02-26", event: "Happy birthday saoud" },
+        { date: "2024-04-27", event: "Event 3" }
+      ];
+
+      var eventTableBody = document.getElementById("eventTableBody");
+      eventTableBody.innerHTML = ""; // Clear existing rows
+
+      var selectedEvent = events.find(function(event) {
+        return event.date === selectedDate;
+      });
+
+      if (selectedEvent) {
+        var row = "<tr><td>" + selectedEvent.date + "</td><td>" + selectedEvent.event + "</td></tr>";
+        eventTableBody.innerHTML = row;
+      }
+    }
+  </script>
+</body>
+</html>

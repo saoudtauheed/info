@@ -1,0 +1,139 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: rgb(213, 7, 7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #f2f2f2;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #444;
+}
+
+.container {
+    margin-top: 20px;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+.table th, .table td {
+    text-align: left;
+}
+
+.button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.button button {
+    padding: 10px 20px;
+    background-color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#attendanceForm {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#attendanceForm h2 {
+    margin-bottom: 10px;
+}
+
+#attendanceForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#attendanceForm input[type="text"] {
+    padding: 8px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#attendanceForm button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+
+@keyframes anim {
+    0% {
+        background-image: url('https://icolleges.in/wp-content/uploads/2021/01/Capture5-5.jpg');
+    }
+    25% {
+        background-image: url('https://i.ytimg.com/vi/HbQ3aKR_JtA/maxresdefault.jpg');
+    }
+    50% {
+        background-image: url('https://www.targetadmission.com/img/colleges/newc/50796-510931.jpg');
+    }
+    75% {
+        background-image: url('https://gumlet.assettype.com/knocksense/import/28267319/origin.jpg?w=1200&auto=format%2Ccompress&ogImage=true&enlarge=true');
+    }
+    100% {
+        background-image: url('https://www.addressguru.in/images/1595426084.png');
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        margin: 5px;
+    }
+    table {
+        font-size: small; 
+    }
+    body {
+        background-size: 200vh; 
+    }
+}
+
